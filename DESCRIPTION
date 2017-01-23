@@ -1,0 +1,9 @@
+Package: cimentadaj
+Title: My various R functions
+Version: 0.0.0.9000
+Authors@R: person("Jorge", "Cimentada", email = "cimentadaj@gmail.com", role = c("aut", "cre"))
+Description: My various functions.
+Depends: R (>= 3.3.1)
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
