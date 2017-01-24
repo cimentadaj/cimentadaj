@@ -4,7 +4,7 @@
 \alias{stargazer2}
 \title{Logistic regression table with odd ratios}
 \usage{
-stargazer2(model, odd.ratio = F, ...)
+stargazer2(model, odd.ratio = FALSE, ...)
 }
 \arguments{
 \item{model}{A non-empty list containing one or more glm models}
@@ -21,21 +21,22 @@ A stargazer table with correct odd ratios, standard errors and p values
 Logistic regression table with odd ratios
 }
 \examples{
-stargazer2(glm(am ~ mpg, data = mtcars), odd.ratio = T, type = "text") # Odd ratios
-stargazer2(glm(am ~ mpg, data = mtcars), odd.ratio = F, type = "text") # Log odds
+stargazer2(glm(am ~ mpg, data = mtcars), odd.ratio = TRUE, type = "text") # Odd ratios
+stargazer2(glm(am ~ mpg, data = mtcars), odd.ratio = FALSE, type = "text") # Log odds
 
 # Let's compare it with Stata output:
 
 # R table
-# library(haven)
-auto <- read_dta("http://www.stata-press.com/data/r13/auto.dta")
+library(haven)
+auto <- haven::read_dta("http://www.stata-press.com/data/r13/auto.dta")
+auto$mpg2 <- auto$mpg > 21.29
 model <- glm(mpg2 ~ price + rep78 + turn + displacement, data = auto, family = "binomial")
-stargazer2(model, odd.ratio = T, type = "text", single.row = T)
+stargazer2(model, odd.ratio = TRUE, type = "text", single.row = TRUE)
 
 # Stata table (run in Stata)
-use http://www.stata-press.com/data/r13/auto.dta, clear
-gen mpg2 = mpg > 21.29
-logit mpg2 price rep78 turn displacement, or
+# use http://www.stata-press.com/data/r13/auto.dta, clear
+# gen mpg2 = mpg > 21.29
+# logit mpg2 price rep78 turn displacement, or
 
 }
 
