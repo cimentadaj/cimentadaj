@@ -22,6 +22,6 @@ models <- function(dv, covariates, data) {
   formulas <- lapply(combinations, function(p) x <- stats::as.formula(paste(c(dv, covariates[p]), collapse=" + ")))
 
   # Run the model on each formula and returns a list of models
-  results <- lapply(formulas, function(o) survey::svyglm(o, design = data)[[1]])
+  results <- lapply(formulas, function(o) with(data, survey::svyglm(o)[[1]]))
   return(results)
 }
