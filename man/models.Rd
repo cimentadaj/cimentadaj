@@ -16,12 +16,13 @@ models(dv, covariates, data)
 \value{
 Returns a list with length(covariates) where the first slot are the results of the dependent variable
 regressed on the first covariate. The second slot is the dependent variable regressed on the first two
- covariates and so on, until the last slot, which contains the dependent variable regressed on all covariates
+covariates and so on, until the last slot, which contains the dependent variable regressed on all covariates
 }
 \description{
 Build sequence of replicate-survey-adjusted models
 }
 \examples{
 # Don't have time
+
 }
 
