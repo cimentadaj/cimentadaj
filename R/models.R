@@ -18,7 +18,7 @@ models <- function(dv, covariates, data) {
   combinations <- lapply(1:length(covariates), function(i) seq(1:i))
 
   # List of sequential formulas
-  formulas <- lapply(combinations, function(p) x <- as.formula(paste(c(dv, covariates[p]), collapse=" + ")))
+  formulas <- lapply(combinations, function(p) x <- stats::as.formula(paste(c(dv, covariates[p]), collapse=" + ")))
 
   # Run the model on each formula and returns a list of models
   results <- lapply(formulas, function(o) with(data, svyglm(o))[[1]])
