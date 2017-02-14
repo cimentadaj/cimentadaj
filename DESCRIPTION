@@ -15,4 +15,5 @@ Imports: stats,
     sandwich,
     stargazer,
     haven,
-    survey
+    survey,
+    PISA2006lite
