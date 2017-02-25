@@ -16,4 +16,5 @@ Imports: stats,
     stargazer,
     haven,
     survey,
-    PISA2006lite
+    PISA2006lite,
+    purrr
