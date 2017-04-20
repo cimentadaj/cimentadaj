@@ -3,6 +3,7 @@
 #' @param dv A character element specifying the name of the dependent variable
 #' @param covariates A character vector with the names of the covariates
 #' @param data The replicated survey design which contains all of the variables outlined above
+#' @param family_models The link family to use. See ?family
 #'
 #' @return Returns a list with length(covariates) where the first slot are the results of the dependent variable
 #' regressed on the first covariate. The second slot is the dependent variable regressed on the first two
@@ -21,6 +22,6 @@ models <- function(dv, covariates, data, family_models = "gaussian") {
   formulas <- lapply(combinations, function(p) x <- stats::as.formula(paste(c(dv, covariates[p]), collapse=" + ")))
 
   # Run the model on each formula and returns a list of models
-  results <- lapply(formulas, function(o) with(data, svyglm(o, family = family_models))[[1]])
+  results <- lapply(formulas, function(o) with(data, svyglm(o, family = eval(family_models)))[[1]])
   return(results)
 }
