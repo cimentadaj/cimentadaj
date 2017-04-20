@@ -39,4 +39,3 @@ stargazer2(model, odd.ratio = TRUE, type = "text", single.row = TRUE)
 # logit mpg2 price rep78 turn displacement, or
 
 }
-

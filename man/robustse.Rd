@@ -29,4 +29,3 @@ robustse(mod1, coef = "probs")
 
 # See http://www.jorgecimentada.com/?p=214 for a detailed example.
 }
-

@@ -22,4 +22,3 @@ unique(pisa_countrynames[as.character(PISA2006lite::student2006$CNT)]) # New cou
 # This can be saved as a new column or replace the previous column.
 }
 \keyword{pisa_countrynames}
-

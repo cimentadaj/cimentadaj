@@ -30,4 +30,3 @@ gen_rscript(dir = ".", "new_script", "Jorge Cimentada", "new_project", FALSE)
 # This should create a new R script in your working directory
 
 }
-

@@ -4,7 +4,7 @@
 \alias{models}
 \title{Build sequence of replicate-survey-adjusted models}
 \usage{
-models(dv, covariates, data)
+models(dv, covariates, data, family_models = "gaussian")
 }
 \arguments{
 \item{dv}{A character element specifying the name of the dependent variable}
@@ -12,6 +12,8 @@ models(dv, covariates, data)
 \item{covariates}{A character vector with the names of the covariates}
 
 \item{data}{The replicated survey design which contains all of the variables outlined above}
+
+\item{family_models}{The link family to use. See ?family}
 }
 \value{
 Returns a list with length(covariates) where the first slot are the results of the dependent variable
@@ -25,4 +27,3 @@ Build sequence of replicate-survey-adjusted models
 # Don't have time
 
 }
-

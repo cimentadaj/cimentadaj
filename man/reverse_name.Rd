@@ -18,4 +18,3 @@ reverse_name
 \examples{
 reverse_name(c(a = 'b', c = 'b'))
 }
-
