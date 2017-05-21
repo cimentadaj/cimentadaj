@@ -17,4 +17,6 @@ Imports: stats,
     haven,
     survey,
     PISA2006lite,
-    purrr
+    purrr,
+    tibble,
+    utils
