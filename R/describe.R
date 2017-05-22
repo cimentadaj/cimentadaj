@@ -127,9 +127,8 @@ describe.data.frame <- function(x) {
   tibble::tribble(
     ~ Detail, ~ Info,
     "Class", paste(class(x), collapse = ", "),
-    "Length", length(x),
-    "Column names", colnames,
     "Dimesions", paste(dim(x), collapse = " x "),
+    "Column names", colnames,
     "Other attr", ifelse(length(other_attr) > 0, "Yes", "No"),
     "Size", format(utils::object.size(x), units = "Mb")
   )
@@ -184,11 +183,6 @@ describe.list <- function(x) {
   if (all(all_classes_equal)) {
     row_index <- grep("Class the same?", df$Detail)
     df <- tibble::add_row(df, Detail = "Class of objects", Info = class(x[[1]]), .after = row_index)
-  }
-
-  if (all(all_lengths_equal)) {
-    row_index <- grep("Length the same?", df$Detail)
-    df <- tibble::add_row(df, Detail = "Length of objects", Info = length(x[[1]]), .after = row_index)
   }
 
   df
