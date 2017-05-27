@@ -36,6 +36,7 @@ gen_rscript <- function(dir, filename, author, project, open_file = F) {
   writeLines(preamble, file_path)
 
   if(open_file) {
+    file_path <- gsub(" ", "\\\\ ", file_path) # Make sure spaces are replaced by backsladh and space
     system2("open", paste0(file_path, " -a Rstudio"))
   }
 }
