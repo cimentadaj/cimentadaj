@@ -54,8 +54,6 @@ describe <- function(x) {
 #'
 #' @return A tibble with usual properties such as length, size, and attributes such as names, dimensions
 #' if apply.
-#' @export
-#'
 describe.generic <- function(x) {
   tibble::tribble(
     ~ Detail, ~ Info,
@@ -72,8 +70,6 @@ describe.generic <- function(x) {
 #' @param x An object
 #'
 #' @return Text specifying that no method exists for that class
-#' @export
-#'
 describe.default <- function(x) {
   cat("Unknown class:", class(x))
 }
@@ -84,8 +80,6 @@ describe.default <- function(x) {
 #'
 #' @return A tibble with usual properties such as length, size, and attributes such as names, dimensions
 #' if apply.
-#' @export
-#'
 describe.matrix <- function(x) {
 
   other_attr <- setdiff(names(attributes(x)), "dim")
@@ -107,8 +101,6 @@ describe.matrix <- function(x) {
 #'
 #' @return A tibble with usual properties such as length, size, and attributes such as names, dimensions
 #' if apply.
-#' @export
-#'
 describe.data.frame <- function(x) {
 
   other_attr <- setdiff(names(attributes(x)), "dim")
@@ -141,8 +133,6 @@ describe.data.frame <- function(x) {
 #'
 #' @return A tibble with usual properties such as length, size, and attributes such as names, dimensions
 #' if apply.
-#' @export
-#'
 describe.list <- function(x) {
 
   if (!length(x)) return(cat("empty list"))
