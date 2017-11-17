@@ -7,6 +7,9 @@
 #' @export
 #'
 #' @examples
+#'
+#' # No time
+#'
 my_new_post <- function(title, ...) {
 
   title_change <- trimws(gsub("[[:punct:]]", "", title))
