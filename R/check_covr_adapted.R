@@ -4,6 +4,7 @@
 ##' either 'true' or 'false'
 ##' @return results from devtools::check
 ##' @author Jorge Cimentada
+##' @export
 adapted_check <- function(..., run_tests = 'true') {
   on.exit(Sys.setenv("NOT_CRAN" = Sys.getenv("NOT_CRAN")))
   Sys.setenv("NOT_CRAN" = run_tests)
@@ -16,6 +17,7 @@ adapted_check <- function(..., run_tests = 'true') {
 ##' either 'true' or 'false'
 ##' @return results from covr::codecov
 ##' @author Jorge Cimentada
+##' @export
 adapted_covr <- function(..., run_tests = 'true') {
   on.exit(Sys.setenv("NOT_CRAN" = Sys.getenv("NOT_CRAN")))
   Sys.setenv("NOT_CRAN" = run_tests)
