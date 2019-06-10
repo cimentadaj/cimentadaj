@@ -8,8 +8,9 @@ Depends:
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.0.1
-Imports: stats,
+RoxygenNote: 6.1.1
+Imports: 
+    stats,
     beepr,
     lmtest,
     sandwich,
@@ -19,4 +20,6 @@ Imports: stats,
     PISA2006lite,
     purrr,
     tibble,
-    utils
+    utils,
+    devtools,
+    covr

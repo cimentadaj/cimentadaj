@@ -18,6 +18,8 @@ Get a description of object x
 }
 \examples{
 
+
+\dontrun{
 x <- NULL
 describe(x)
 
@@ -50,4 +52,7 @@ describe(x)
 
 x <- list(1:10, 1:2)
 describe(x)
+
+
+}
 }

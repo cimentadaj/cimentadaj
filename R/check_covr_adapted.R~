@@ -1,0 +1,6 @@
+adapted_check <- function(..., run_tests = 'true') {
+
+  on.exit(Sys.setenv("NOT_CRAN", Sys.getenv("NOT_CRAN")))
+  Sys.setenv("NOT_CRAN" = run_tests)
+  devtools::check(...)
+}

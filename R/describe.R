@@ -8,6 +8,8 @@
 #'
 #' @examples
 #'
+#'
+#' \dontrun{
 #' x <- NULL
 #' describe(x)
 #'
@@ -40,6 +42,9 @@
 #'
 #' x <- list(1:10, 1:2)
 #' describe(x)
+#'
+#'
+#' }
 describe <- function(x) {
   if (any(class(x) %in% c("numeric", "integer", "double", "character"))) {
     describe.generic(x)
