@@ -22,4 +22,7 @@ Imports:
     tibble,
     utils,
     devtools,
-    covr
+    covr,
+    blogdown,
+    lubridate,
+    stringr
