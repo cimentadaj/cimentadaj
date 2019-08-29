@@ -2,6 +2,8 @@
 
 export(adapted_check)
 export(adapted_covr)
+export(adapted_test)
+export(adapted_test_file)
 export(describe)
 export(gen_rscript)
 export(models)
