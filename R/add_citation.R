@@ -35,6 +35,8 @@ add_citation <- function() {
   )"
   )
 
+  dir.create(here::here("inst"), showWarnings = FALSE)
+  file.create(here::here("inst", "CITATION"), showWarnings = FALSE)
   writeLines(citation_str, here::here("inst", "CITATION"))
 
   onload_fun <- glue::glue(
