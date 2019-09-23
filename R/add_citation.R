@@ -31,7 +31,7 @@ add_citation <- function() {
     year     = '{year}',
     note     = '{vers}',
     url      = '{desc$get('URL')}',
-    textVersion = {full_citation}
+    textVersion = '{full_citation}'
   )"
   )
 
