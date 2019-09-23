@@ -25,4 +25,7 @@ Imports:
     covr,
     blogdown,
     lubridate,
-    stringr
+    stringr,
+    here,
+    desc,
+    glue
