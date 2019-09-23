@@ -7,6 +7,7 @@
 ##' @title Add all citation information of your package
 ##' @return Nothing
 ##' @author Jorge
+##' @export
 add_citation <- function() {
   desc <- desc::description$new()
   desc$set("Date", Sys.Date())
