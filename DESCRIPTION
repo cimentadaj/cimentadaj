@@ -28,4 +28,10 @@ Imports:
     stringr,
     here,
     desc,
-    glue
+    glue,
+    usethis,
+    startup,
+    crayon,
+    pak,
+    renv,
+    clisymbols

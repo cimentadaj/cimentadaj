@@ -14,13 +14,13 @@
 #' # Not run
 timer <- function(mins, sound = 8) {
 
-total_mins <- ifelse(abs(mins - round(mins)) < .Machine$double.eps^0.5, mins * 60, mins * 100)
+  total_mins <- ifelse(abs(mins - round(mins)) < .Machine$double.eps^0.5, mins * 60, mins * 100)
 
-timeisup <- Sys.time() + total_mins
+  timeisup <- Sys.time() + total_mins
 
-while(Sys.time() < timeisup) {
-# do nothing
-}
+  while(Sys.time() < timeisup) {
+    # do nothing
+  }
 
-beepr::beep(sound)
+  beepr::beep(sound)
 }
