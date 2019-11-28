@@ -17,6 +17,7 @@
 ##' @param path the path where the repository will be saved locally
 ##' @return invisible TRUE
 ##' @author Jorge
+##' @export
 ##'
 ##' @examples
 ##'
@@ -31,6 +32,7 @@ create_proj <- function(repo_name, path = ".") {
   ############################# Clone repository ###############################
   ##############################################################################
   print_styler('Cloning repository')
+  cat("\n")
   path <- normalizePath(path, winslash = .Platform$file.sep, mustWork = FALSE)
   usethis::create_from_github(repo_name, destdir = path)
 
@@ -101,6 +103,7 @@ create_proj <- function(repo_name, path = ".") {
 
   print_styler("Installing drake as project dependency")
   pak::pkg_install("drake")
+  pak::pkg_install("startup")
   
   # Restart for renv to take effect
   startup::restart()
